@@ -30,7 +30,7 @@ const Icon = styled.i`
 
 export const WhatsAppChat = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "1234567890";
+    const phoneNumber = "7350837127";
     const message = encodeURIComponent(
       "Hi, I would like to have a call for counseling."
     );
