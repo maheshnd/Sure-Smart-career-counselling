@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/Sure-Smart-career-counselling/static/js/main.cf8ad2f1.js",
+    "main.js": "/Sure-Smart-career-counselling/static/js/main.f8bf535c.js",
     "static/js/787.82ce774e.chunk.js": "/Sure-Smart-career-counselling/static/js/787.82ce774e.chunk.js",
     "index.html": "/Sure-Smart-career-counselling/index.html",
-    "main.cf8ad2f1.js.map": "/Sure-Smart-career-counselling/static/js/main.cf8ad2f1.js.map",
+    "main.f8bf535c.js.map": "/Sure-Smart-career-counselling/static/js/main.f8bf535c.js.map",
     "787.82ce774e.chunk.js.map": "/Sure-Smart-career-counselling/static/js/787.82ce774e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.cf8ad2f1.js"
+    "static/js/main.f8bf535c.js"
   ]
 }
