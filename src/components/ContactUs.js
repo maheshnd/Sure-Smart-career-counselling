@@ -142,7 +142,7 @@ export const ContactUs = () => {
                     <InputField
                       name={"subject"}
                       onChange={handleFromChange}
-                      placeholder={"Enter your phone"}
+                      placeholder={"Enter your subject"}
                       errorMessage={formValue.subject.error}
                       value={formValue.subject.value}
                     />
