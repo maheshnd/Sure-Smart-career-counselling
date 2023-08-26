@@ -45,7 +45,7 @@ export const HomeImage = () => {
   const imagePaths = [
     "images/creer3.png",
     "images/creer2.png",
-    "/images/creer.png",
+    "images/creer.png",
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   useEffect(() => {
