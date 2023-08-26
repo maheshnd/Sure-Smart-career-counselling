@@ -2,6 +2,11 @@ import { BrandName } from "./BrandName";
 import { scrollToSection } from "./helper";
 
 export const Navbar = () => {
+  const handleClick = (section) => {
+    const ftcoNav = document.getElementById("ftco-nav");
+    ftcoNav.classList.remove("show");
+    scrollToSection(section);
+  };
   return (
     <>
       <nav
@@ -24,43 +29,43 @@ export const Navbar = () => {
 
           <div className="collapse navbar-collapse" id="ftco-nav">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
+              <li className="nav-item active nav-list-item">
                 <a href="/" className="nav-link">
                   Home
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item nav-list-item">
                 <a
                   href="#"
                   className="nav-link"
-                  onClick={() => scrollToSection("services_section")}
+                  onClick={() => handleClick("services_section")}
                 >
                   Services
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item nav-list-item">
                 <a
                   href="#"
                   className="nav-link"
-                  onClick={() => scrollToSection("about_us")}
+                  onClick={() => handleClick("about_us")}
                 >
                   About
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item nav-list-item">
                 <a
                   className="nav-link"
                   href="#"
-                  onClick={() => scrollToSection("importanceOfCounseling")}
+                  onClick={() => handleClick("importanceOfCounseling")}
                 >
                   Importance of counseling
                 </a>
               </li>
-              <li className="nav-item cta">
+              <li className="nav-item cta nav-list-item">
                 <a
                   href="#"
                   className="nav-link"
-                  onClick={() => scrollToSection("contactus")}
+                  onClick={() => handleClick("contactus")}
                 >
                   <span>Get started</span>
                 </a>

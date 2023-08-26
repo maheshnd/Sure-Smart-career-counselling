@@ -114,7 +114,7 @@ export const ContactUs = () => {
                       name={"name"}
                       value={formValue.name.value}
                       onChange={handleFromChange}
-                      placeholder={"Enter your name"}
+                      placeholder={"Name"}
                       errorMessage={formValue.name.error}
                     />
                   </div>
@@ -122,7 +122,7 @@ export const ContactUs = () => {
                     <InputField
                       name={"email"}
                       onChange={handleFromChange}
-                      placeholder={"Enter your email"}
+                      placeholder={"Email"}
                       errorMessage={formValue.email.error}
                       value={formValue.email.value}
                     />
@@ -133,7 +133,7 @@ export const ContactUs = () => {
                     <InputField
                       name={"phone"}
                       onChange={handleFromChange}
-                      placeholder={"Enter your phone"}
+                      placeholder={"Phone"}
                       errorMessage={formValue.phone.error}
                       value={formValue.phone.value}
                     />
@@ -142,7 +142,7 @@ export const ContactUs = () => {
                     <InputField
                       name={"subject"}
                       onChange={handleFromChange}
-                      placeholder={"Enter your subject"}
+                      placeholder={"Subject"}
                       errorMessage={formValue.subject.error}
                       value={formValue.subject.value}
                     />
@@ -156,7 +156,7 @@ export const ContactUs = () => {
                     rows={8}
                     cols={120}
                     className="form-control "
-                    placeholder="Write Message"
+                    placeholder="Message"
                     name="message"
                     value={formValue.message.value}
                     onChange={handleFromChange}
