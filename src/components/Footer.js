@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import { BrandName } from "./BrandName";
-import { scrollToSection } from "./helper";
+import { scrollToSection, validSection } from "./helper";
+import { Link, useLocation } from "react-router-dom";
 
 export const Footer = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if (validSection.includes(location?.hash)) {
+      scrollToSection(location?.hash);
+    }
+  }, [location?.hash]);
   return (
     <footer className="ftco-footer ftco-bg-dark ftco-section">
       <div className="container">
@@ -23,19 +31,19 @@ export const Footer = () => {
               <h2 className="ftco-heading-2">Fallow US</h2>
               <ul className="ftco-footer-social list-unstyled mb-0">
                 <li className="ftco-animate">
-                  <a href="https://twitter.com" target="_blank">
+                  <Link to="https://twitter.com" target="_blank">
                     <span className="icon-twitter"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="ftco-animate">
-                  <a href="https://www.facebook.com/" target="_blank">
+                  <Link to="https://www.facebook.com/" target="_blank">
                     <span className="icon-facebook"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="ftco-animate">
-                  <a href="https://www.instagram.com/" target="_blank">
+                  <Link to="https://www.instagram.com/" target="_blank">
                     <span className="icon-instagram"></span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -45,45 +53,32 @@ export const Footer = () => {
               <h2 className="ftco-heading-2">Links</h2>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#" className="py-2 d-block">
+                  <Link to={"/#introduction-section"} className="py-2 d-block">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="py-2 d-block"
-                    onClick={() => scrollToSection("services_section")}
-                  >
+                  <Link to={"/#services_section"} className="py-2 d-block">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="py-2 d-block"
-                    onClick={() => scrollToSection("about_us")}
-                  >
+                  <Link to={"/#about_us"} className="py-2 d-block">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to={"/#importanceOfCounseling"}
                     className="py-2 d-block"
-                    onClick={() => scrollToSection("importanceOfCounseling")}
                   >
                     Importance of counseling
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="py-2 d-block"
-                    onClick={() => scrollToSection("contactus")}
-                  >
+                  <Link to={"/#contactus"} className="py-2 d-block">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -122,9 +117,9 @@ export const Footer = () => {
               Copyright &copy;
               <script>document.write(new Date().getFullYear());</script> All
               rights reserved by{" "}
-              <a href="" target="_blank">
+              <Link to={"/"} target="_blank">
                 Sure Smart
-              </a>
+              </Link>
             </p>
           </div>
         </div>

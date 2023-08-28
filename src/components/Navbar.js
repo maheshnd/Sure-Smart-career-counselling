@@ -1,12 +1,19 @@
+import { useEffect } from "react";
 import { BrandName } from "./BrandName";
-import { scrollToSection } from "./helper";
+import { scrollToSection, validSection } from "./helper";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export const Navbar = () => {
-  const handleClick = (section) => {
+  const location = useLocation();
+  useEffect(() => {
     const ftcoNav = document.getElementById("ftco-nav");
     ftcoNav.classList.remove("show");
-    scrollToSection(section);
-  };
+    if (validSection.includes(location?.hash)) {
+      scrollToSection(location?.hash);
+    }
+  }, [location?.hash]);
+
   return (
     <>
       <nav
@@ -30,45 +37,29 @@ export const Navbar = () => {
           <div className="collapse navbar-collapse" id="ftco-nav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active nav-list-item">
-                <a href="/" className="nav-link">
+                <Link to="/#introduction-section" className="nav-link">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item nav-list-item">
-                <a
-                  href="#"
-                  className="nav-link"
-                  onClick={() => handleClick("services_section")}
-                >
+                <Link to="/#services_section" className="nav-link">
                   Services
-                </a>
+                </Link>
               </li>
               <li className="nav-item nav-list-item">
-                <a
-                  href="#"
-                  className="nav-link"
-                  onClick={() => handleClick("about_us")}
-                >
+                <Link to={"/#about_us"} className="nav-link">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item nav-list-item">
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={() => handleClick("importanceOfCounseling")}
-                >
+                <Link className="nav-link" to={"/#importanceOfCounseling"}>
                   Importance of counseling
-                </a>
+                </Link>
               </li>
               <li className="nav-item cta nav-list-item">
-                <a
-                  href="#"
-                  className="nav-link"
-                  onClick={() => handleClick("contactus")}
-                >
+                <Link to={"/studentInfo"} className="nav-link">
                   <span>Get started</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

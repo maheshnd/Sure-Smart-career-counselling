@@ -89,7 +89,6 @@ export const Grades8to10 = () => {
                     <li className="list-group-item">
                       Questions on India and Abroad Colleges
                     </li>
-                    <li className="list-group-item">Dapibus ac facilisis in</li>
                     <li className="list-group-item">
                       College admissions and scholarships advice
                     </li>
@@ -143,7 +142,7 @@ export const Grades8to10 = () => {
                       Test, pattern syllabus and finalizing best strategy
                     </li>
                     <li className="list-group-item">
-                      Short listing colleges :Aspiration ,Best -fit and Safe fit
+                      Short listing colleges: Aspiration, Best-fit and Safe fit
                     </li>
                     <li className="list-group-item">
                       College List servicesFor atleast 2 Career options

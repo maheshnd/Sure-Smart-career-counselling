@@ -1,24 +1,21 @@
-import { AboutUs } from "./components/About/AboutUs1";
-import { ContactUs } from "./components/ContactUs";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Footer } from "./components/Footer";
-import { ImportanceOfCounseling } from "./components/ImportanceOfCounseling";
-import { IntroductionSection } from "./components/IntroductionSection";
+import { MainSection } from "./components/MainSection";
 import { Navbar } from "./components/Navbar";
-import { Services } from "./components/ServicesSection/Services";
+import { StudentInfoGoogleForm } from "./components/StudentInfoGoogleForm";
 import { WhatsAppChat } from "./components/WhatsAppChat";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
+      <Routes>
+        <Route path="/*" element={<MainSection />} />
+        <Route path="/studentInfo" element={<StudentInfoGoogleForm />} />
+      </Routes>
       <WhatsAppChat />
-      <IntroductionSection />
-      <ImportanceOfCounseling />
-      <Services />
-      <AboutUs />
-      <ContactUs />
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

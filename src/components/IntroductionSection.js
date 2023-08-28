@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import { HomeImage } from "./HomeImage";
 import { scrollToSection } from "./helper";
 
 export const IntroductionSection = () => {
   return (
-    <div className="hero-wrap js-fullheight">
+    <div className="hero-wrap js-fullheight" id="introduction-section">
       <div className="overlay"></div>
       <div className="container-fluid px-0">
         <div className="row d-md-flex no-gutters slider-text align-items-center js-fullheight justify-content-end">
@@ -22,13 +23,12 @@ export const IntroductionSection = () => {
                 the journey towards a successful career path.
               </p>
               <p>
-                <a
-                  href="#"
+                <Link
                   className="btn btn-primary px-4 py-3"
-                  onClick={() => scrollToSection("contactus")}
+                  onClick={() => scrollToSection("#contactus")}
                 >
                   Get in touch
-                </a>
+                </Link>
               </p>
             </div>
           </div>

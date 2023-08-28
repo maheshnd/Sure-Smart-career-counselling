@@ -1,5 +1,6 @@
 export const scrollToSection = (id) => {
-  const section = document.getElementById(id);
+  const sectionId = id?.substring(1) || "";
+  const section = document.getElementById(sectionId);
   if (section) {
     const targetY = section.getBoundingClientRect().top + window.pageYOffset;
     const initialY = window.pageYOffset;
@@ -24,3 +25,11 @@ export const scrollToSection = (id) => {
     requestAnimationFrame(step);
   }
 };
+
+export const validSection = [
+  "#services_section",
+  "#about_us",
+  "#importanceOfCounseling",
+  "#contactus",
+  "#introduction-section",
+];
