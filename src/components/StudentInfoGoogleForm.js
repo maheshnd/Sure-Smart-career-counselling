@@ -16,7 +16,7 @@ export const StudentInfoGoogleForm = () => {
         <div className="row justify-content-center mb-5 pb-3">
           <div className="col-md-7 text-center heading-section ftco-animate">
             <h2 className="mb-4">The importance of counseling</h2>
-            {/* <iframe
+            <iframe
               title="studentinfoform"
               src="https://docs.google.com/forms/d/e/1FAIpQLSfTX9BpF1JI1-jXbDjvT56hznAVVOj2OI2lzvWImOJPbQ3W_A/viewform?embedded=true"
               width="500"
@@ -26,7 +26,7 @@ export const StudentInfoGoogleForm = () => {
               style={{ width: "100%" }}
             >
               Loading…
-            </iframe> */}
+            </iframe>
           </div>
         </div>
       </div>
